@@ -80,20 +80,20 @@ header ul li a:hover {
     margin: 10% -25%;
 }*/
 
-.project-card {
+.tools-card {
     margin-top: 40px;
     display: inline-block;
     vertical-align: top;
     text-align: center;
 }
 
-.project-card h2 {
+.tools-card h2 {
     font-weight: 400;
     /*text-align: center; */
 }
 
-.project-card img {
-    width: 150px;
+.tools-card img {
+    width: 200px;
 }
 
 .scrollable {
@@ -121,14 +121,14 @@ header ul li a:hover {
     color: #fff;
 }
 
-#daily-websites {
+#projects {
     padding-top: 10%;
     padding-bottom: 30%;
     transform: skewY(-5deg);
     color: #fff;
 }
 
-#daily-websites img {
+#projects img {
     /*width: 100%;*/
     /*padding: 0;*/
     vertical-align: middle;
@@ -136,7 +136,7 @@ header ul li a:hover {
     margin: auto;
 }
 
-#daily-websites {
+#projects {
     text-align: center;
 }
 
@@ -191,13 +191,13 @@ header ul li a:hover {
 }
 
 @media only screen and (min-width: 500px) {
-    .project-card img {
+    .tools-card img {
         padding-right: 10px;
         float: left;
     }
 }
 @media only screen and (min-width: 700px){
-    #daily-websites {
+    #projects {
         padding-top: 10%;
         padding-bottom: 15%;
     }
@@ -209,29 +209,29 @@ header ul li a:hover {
         margin: 0px 10%;
     }
     
-    #projects {
+    #tools {
         text-align: center;
     }
     
-    .project-card {
+    .tools-card {
         width: 50%;
         padding: 0px 50px;
         box-sizing: border-box;
     }
 
-    .project-card:nth-child(2) {
+    .tools-card:nth-child(2) {
         padding-left: 0px;
     }
 
-    .project-card:last-child {
+    .tools-card:last-child {
         padding-right: 0px;
     }
     
-    .project-card p {
+    .tools-card p {
         text-align: justify;
     }
 
-    .project-card img {
+    .tools-card img {
         float: none;
     }
     
