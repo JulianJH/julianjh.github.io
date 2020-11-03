@@ -2,68 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Minimal Website - JJH</title>
+    <title>Julian's Portfolio</title>
 
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://kit.fontawesome.com/3fa87815ac.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header id="header">
         <ul>
-            <li><a href="#body">Velit</a></li>
-            <li><a href="#about">Lorem</a></li>
-            <li><a href="#tools">Dolor</a></li>
-            <li><a href="#projects">Dolor</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#projects">Projects</a></li>
         </ul>
     </header>
 
-    <div class="grid">
-        <div class="section" id="home">
-            <img src="img/avatar.png" alt="">
-            <h1>Corporis</h1>
-            Lorem ipsum dolor sit amet
-        </div>
-        
-        <div class="left-twist">
-            <div class="section" id="about">
-                <h1>About Me</h1>
-                
-                <p>I'm a Computer Sciences student at the Buenos Aires University in Argentina. I've been deeping into programming for 7 years now and I have explored different areas of development. From different web technologies like HTML, PHP, .NET for webapps to developing simple 2D games using Unity3D and C#.</p>
+    <section id="home">
+        <img src="img/avatar.png" alt="">
+        <h1>Julián Jorgensen</h1>
+        FullStack Jr Dev
+    </section>
 
-            </div> 
-        </div>
+    <div class="left-twist">
+        <section id="about">
+            <h1>About Me</h1>
+            
+            <p>I'm a Computer Sciences student at the Buenos Aires University in Argentina. I've been deeping into programming for 7 years now and I have explored different areas of development. From different web technologies like HTML, PHP, .NET for webapps to developing simple 2D games using Unity3D and C#, also participating in national programming competitions using C++.</p>
 
-        <div class="section" id="tools">
-            <h1>What I Use</h1>
-            <div class="tools-card">
-                <img src="img/aspnet.png" alt="">
-                <h2>Iusto libero</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam architecto modi tempore libero eos similique, sed, non aperiam.</p>
-            </div><div class="tools-card">
-                <img src="img/hcj.png" alt="">
-                <h2>Sequi odio</h2>
-                <p>Iusto libero aspernatur fugit quasi blanditiis possimus sint laudantium tenetur sit, quis, quibusdam incidunt beatae?</p>
+        </section> 
+    </div>
+
+    <section id="tools">
+        <h1>What I've Used</h1>
+        <div class="row">
+            <img src="img/hcj.png">
+            <img src="img/c++.png">
+            <img src="img/csharp.png">
+            <img src="img/aspnet.png">
+            <img src="img/sql.png">
+        </div>
+    </section>
+
+    <div class="right-twist">
+        <section id="projects" >
+            <h1>FrontEnd Mockup Projects</h1>
+            <div class="scrollable" id="content">
+                <a href="/Portfolio"><img src="img/02.png" alt=""></a>
+                <a href="/GEFIM"><img src="img/03.png" alt=""></a>
+                <a href="/ArtistPortfolio"><img src="img/04.png" alt=""></a>
             </div>
-        </div>
-
-        <div class="right-twist">
-            <div class="section" id="projects" >
-                <h1>Some Projects</h1>
-                <div class="scrollable" id="content">
-                    <a href="/webprojects/Portfolio"><img src="img/02.png" alt=""></a>
-                    <a href="/webprojects/GEFIM"><img src="img/03.png" alt=""></a>
-                    <a href="/webprojects/Karen Portfolio"><img src="img/04.png" alt=""></a>
-                </div>
-                <div id="controls"></div>
-            </div>
-        </div>
-
+            <div id="controls"></div>
+        </section>
     </div>
     
+
+    <a href="#header" id="topButton"><i class="fas fa-angle-up fa-xs"></i></a>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="main.js"></script>
-
 </body>
 </html>

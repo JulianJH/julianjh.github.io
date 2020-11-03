@@ -3,8 +3,19 @@ body {
     font-family: 'Exo 2', sans-serif;
 }
 
-.grid {
-    margin: 0px 5%;
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#topButton {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 4em !important;
+    /*background-color: white;*/
 }
 
 header ul {
@@ -30,18 +41,16 @@ header ul li a:hover {
     border-bottom: 4px dotted #505050;
 }
 
-.section {
+section {
+    width: 80%;
     margin: 60px auto;
-    max-width: 1000px;
-    /*text-align: justify;*/
-    /*background-color: #F3F3F3;*/
-    font-size: 20px;
+    font-size: 1.2em;
+    text-align: justify;
 }
 
-.section h1 {
+section h1 {
     text-align: center;
-    margin: 0;
-    font-weight: 400;
+    margin-top: 0;
 }
 
 #home {
@@ -80,7 +89,7 @@ header ul li a:hover {
     margin: 10% -25%;
 }*/
 
-.tools-card {
+/*.tools-card {
     margin-top: 40px;
     display: inline-block;
     vertical-align: top;
@@ -89,11 +98,26 @@ header ul li a:hover {
 
 .tools-card h2 {
     font-weight: 400;
-    /*text-align: center; */
+    text-align: center;
 }
 
 .tools-card img {
     width: 200px;
+}*/
+
+#tools .row {
+    justify-content: space-around;
+    /*align-items: flex-start;*/
+    /*align-content: space-around;*/
+    /*justify-items: flex-start;*/
+}
+
+#tools img {
+    width: 15%;
+    min-width: 100px;
+    max-width: 200px;
+    padding: 0 10px;
+    /*height: auto;*/
 }
 
 .scrollable {
@@ -204,10 +228,6 @@ header ul li a:hover {
 }
 
 @media only screen and (min-width: 900px){
-
-    .grid {
-        margin: 0px 10%;
-    }
     
     #tools {
         text-align: center;
