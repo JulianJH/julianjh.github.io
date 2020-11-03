@@ -1,0 +1,426 @@
+$pink: #f1adba;
+$darkPurple: #574B60;
+$blue: #27CEA7;
+$lila: #DEC1FF;
+$generalPadding: 10%;
+$showcaseWidth: 100;
+
+@mixin even(){
+    &:nth-child(even) {
+        @content
+    }
+}
+
+@mixin odd(){
+    &:nth-child(odd) {
+        @content
+    }
+}
+
+@function cssMax($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function cssMin($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h4 {
+        margin: 0;
+        color: $darkPurple;
+        font-size: 1.5em;
+    }    
+    
+    p{
+        margin: 10px 0 0 0;
+    }    
+}
+
+.center {
+    text-align: center;
+}
+
+#experience {
+    min-height: 50vw;
+    padding: 0 $generalPadding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .row {
+        // flex:1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px 0;
+
+        &:first-of-type {
+            padding-top: 50px;
+        }
+
+        &:last-of-type {
+            padding-bottom: 50px;
+        }
+
+        div {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(30px, 3vw, 11vw);
+            color: $blue;
+        }
+
+        @include odd() {
+            h2 {
+                color: $blue;
+            }
+        }
+
+        @include even() {
+            h2 {
+                color: $pink;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $pink;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 10%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: $darkPurple;
+
+    div {
+        flex: 1;
+        height: 100%;
+        padding: 0 $generalPadding/2;
+
+        span {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        hr {
+            margin-top: 0;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0;
+            padding:0;
+            list-style: none;
+            font-size: 1.3em;
+            
+            li {
+                flex: 1;
+                padding: 0 10px;
+
+                &:hover {
+                    color: #000;
+                }
+
+            }
+
+            .fa {
+                font-size: 1.5em;
+            }
+
+        }
+
+    }
+
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    .grid-item {
+        flex: 1 1 25%;
+    }        
+}
+
+header {
+    height: 100%;
+    padding: 0 $generalPadding;
+    background-image: url("img/avatar6.png");
+    background-size: auto 80%;
+    background-clip: padding-box;
+    background-position: bottom left 20%;
+    background-repeat: no-repeat;
+    background-color: $pink;
+
+    nav {
+        margin: auto;
+        padding: 20px 0;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        font-family: Arial, sans-serif;
+        color: #000;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        span {
+            font-size: 2em;
+        }
+
+        ul {
+            margin: 0;
+            list-style: none;
+            font-size: 1.25em;
+            padding: 0;
+            text-align: center;
+
+            li {
+                display: inline;
+                padding: 0 10px;
+
+                &:last-of-type {
+                    padding-right: 0;
+                }
+
+                a:hover {
+                    display: inline-block;
+                    color: #000;
+                }
+            }
+    
+        }
+    }
+
+    h1 {
+        margin: auto 0 auto auto;
+        text-align: right;
+        // font-family: 'Kaushan Script', cursive;
+        // font-size: cssMin(10vw, 16vh);
+        font-size: cssMin(17vw, 16vh);
+        vertical-align: middle;
+        max-width: 100%;
+        // width: 60%;
+        color: $darkPurple;
+    }
+}
+
+.progress-ring {
+    display: block;
+    margin: auto;
+
+    .progress-ring-circle, .progress-ring-background {
+        stroke-width: 10;
+        fill: transparent;
+    }    
+
+    .progress-ring-background {
+        stroke: $darkPurple;
+        opacity: 0.2;
+    }    
+    
+    .progress-ring-circle {
+        stroke: $pink;
+
+        stroke-dasharray: (70 * 2 * 3.1416) (70 * 2 * 3.1416);
+        transition: stroke-dashoffset 0.5s;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+        stroke-dashoffset: calc(70 * 2 * 3.1416);
+    }    
+}
+
+#showcase {
+    $cols: 4;
+    $boxHeight: calc(#{$showcaseWidth}vw / #{$cols} - (15px / #{$cols}));
+    $imgSize: 100% / $cols;
+    
+    margin: auto;
+    width: $showcaseWidth+0%;
+
+    .frame {
+        height: $boxHeight;
+        // flex-basis: $imgSize;
+
+        &:hover .overlay {
+            opacity: 0.7;
+        }
+        
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+
+            // &:after {
+            //     content: "";
+            //     display: block;
+            //     padding-bottom: 100%;
+            // }
+        }
+
+        .overlay {
+            position: absolute;
+            width: $boxHeight;
+            transform: translate(0%, -100%);
+            opacity: 0;
+            transition: opacity .4s ease;
+            background-color: white;
+            
+            &:after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            .title {
+                color: black;
+                font-size: 20px;
+                position: absolute;
+                padding: 50% 0;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+#stats {
+    padding: 50px 0;
+    min-height: 40vw;
+    background-image: url('img/background.jpg');
+    background-position: center 60%;
+    background-size: cover;
+    align-items: center;
+
+    .card {
+        padding: 0 0 25px 0;
+        box-sizing: border-box;
+        text-align: center;
+
+        img {
+            object-fit: contain;
+            padding: 20px 0;
+        }
+
+        p {
+            margin: auto;
+            max-width: 80%;
+        }
+
+        @include odd() {
+            .progress-ring-circle {
+                stroke: $blue;
+            }
+        }
+
+        @include even() {
+            .progress-ring-circle {
+                stroke: $pink;
+            }
+        }
+    }
+    
+    $percentages: 25, 50, 75, 100;
+    @for $i from 1 to 5 {
+        .card:nth-child(#{$i}) .progress-ring-circle  {
+            stroke-dashoffset: #{ 440 - nth($percentages, $i) / 100 * 440};
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #experience {
+        .row {
+            flex-direction: column;
+
+            .card h4 {
+                margin: 20px 0 0 0;
+            }
+        }
+    }
+
+    .grid .grid-item {
+        flex-basis: 50%;
+    }
+
+    header nav {
+        justify-content: space-around;
+    }
+
+    #showcase {
+        $cols: 2;
+        $boxHeight: calc(#{$showcaseWidth}vw / #{$cols});
+        // $boxHeight: calc(#{$showcaseWidth}vw / #{$cols} - (15px / #{$cols}));
+        $imgSize: 100% / $cols;
+
+        .frame {
+            height: $boxHeight;
+    
+            .overlay {
+                width: $boxHeight;
+            }
+        }
+    }
+
+    #stats {
+        background-position: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    footer div {
+        flex-basis: 100vw;
+        padding-bottom: 30px;
+    }
+
+    .grid .grid-item {
+        flex-basis: 100%;
+    }
+
+    #showcase {
+        $cols: 1;
+        $boxHeight: calc(#{$showcaseWidth}vw / #{$cols});
+        // $boxHeight: calc(#{$showcaseWidth}vw / #{$cols} - (15px / #{$cols}));
+        $imgSize: 100% / $cols;
+        
+        .frame {
+            height: $boxHeight;
+    
+            .overlay {
+                width: $boxHeight;
+            }
+        }
+    }
+
+}

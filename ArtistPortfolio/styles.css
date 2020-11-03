@@ -1,0 +1,429 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body, html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card h4 {
+  margin: 0;
+  color: #574B60;
+  font-size: 1.5em;
+}
+
+.card p {
+  margin: 10px 0 0 0;
+}
+
+.center {
+  text-align: center;
+}
+
+#experience {
+  min-height: 50vw;
+  padding: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#experience .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 0;
+}
+
+#experience .row:first-of-type {
+  padding-top: 50px;
+}
+
+#experience .row:last-of-type {
+  padding-bottom: 50px;
+}
+
+#experience .row div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 10px;
+}
+
+#experience .row h2 {
+  margin: 0;
+  font-size: clamp(30px, 3vw, 11vw);
+  color: #27CEA7;
+}
+
+#experience .row:nth-child(odd) h2 {
+  color: #27CEA7;
+}
+
+#experience .row:nth-child(even) h2 {
+  color: #f1adba;
+}
+
+footer {
+  background-color: #f1adba;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 30px 10%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #574B60;
+}
+
+footer div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  padding: 0 5%;
+}
+
+footer div span {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+footer div hr {
+  margin-top: 0;
+}
+
+footer div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.3em;
+}
+
+footer div ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 10px;
+}
+
+footer div ul li:hover {
+  color: #000;
+}
+
+footer div ul .fa {
+  font-size: 1.5em;
+}
+
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.grid .grid-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+}
+
+header {
+  height: 100%;
+  padding: 0 10%;
+  background-image: url("img/avatar6.png");
+  background-size: auto 80%;
+  background-clip: padding-box;
+  background-position: bottom left 20%;
+  background-repeat: no-repeat;
+  background-color: #f1adba;
+}
+
+header nav {
+  margin: auto;
+  padding: 20px 0;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: Arial, sans-serif;
+  color: #000;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav span {
+  font-size: 2em;
+}
+
+header nav ul {
+  margin: 0;
+  list-style: none;
+  font-size: 1.25em;
+  padding: 0;
+  text-align: center;
+}
+
+header nav ul li {
+  display: inline;
+  padding: 0 10px;
+}
+
+header nav ul li:last-of-type {
+  padding-right: 0;
+}
+
+header nav ul li a:hover {
+  display: inline-block;
+  color: #000;
+}
+
+header h1 {
+  margin: auto 0 auto auto;
+  text-align: right;
+  font-size: min(17vw, 16vh);
+  vertical-align: middle;
+  max-width: 100%;
+  color: #574B60;
+}
+
+.progress-ring {
+  display: block;
+  margin: auto;
+}
+
+.progress-ring .progress-ring-circle, .progress-ring .progress-ring-background {
+  stroke-width: 10;
+  fill: transparent;
+}
+
+.progress-ring .progress-ring-background {
+  stroke: #574B60;
+  opacity: 0.2;
+}
+
+.progress-ring .progress-ring-circle {
+  stroke: #f1adba;
+  stroke-dasharray: 439.824 439.824;
+  -webkit-transition: stroke-dashoffset 0.5s;
+  transition: stroke-dashoffset 0.5s;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  stroke-dashoffset: calc(70 * 2 * 3.1416);
+}
+
+#showcase {
+  margin: auto;
+  width: 100%;
+}
+
+#showcase .frame {
+  height: calc(100vw / 4 - (15px / 4));
+}
+
+#showcase .frame:hover .overlay {
+  opacity: 0.7;
+}
+
+#showcase .frame img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  display: block;
+}
+
+#showcase .frame .overlay {
+  position: absolute;
+  width: calc(100vw / 4 - (15px / 4));
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+  opacity: 0;
+  -webkit-transition: opacity .4s ease;
+  transition: opacity .4s ease;
+  background-color: white;
+}
+
+#showcase .frame .overlay:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+#showcase .frame .overlay .title {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  padding: 50% 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#stats {
+  padding: 50px 0;
+  min-height: 40vw;
+  background-image: url("img/background.jpg");
+  background-position: center 60%;
+  background-size: cover;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#stats .card {
+  padding: 0 0 25px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+#stats .card img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 20px 0;
+}
+
+#stats .card p {
+  margin: auto;
+  max-width: 80%;
+}
+
+#stats .card:nth-child(odd) .progress-ring-circle {
+  stroke: #27CEA7;
+}
+
+#stats .card:nth-child(even) .progress-ring-circle {
+  stroke: #f1adba;
+}
+
+#stats .card:nth-child(1) .progress-ring-circle {
+  stroke-dashoffset: 330;
+}
+
+#stats .card:nth-child(2) .progress-ring-circle {
+  stroke-dashoffset: 220;
+}
+
+#stats .card:nth-child(3) .progress-ring-circle {
+  stroke-dashoffset: 110;
+}
+
+#stats .card:nth-child(4) .progress-ring-circle {
+  stroke-dashoffset: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #experience .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #experience .row .card h4 {
+    margin: 20px 0 0 0;
+  }
+  .grid .grid-item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  header nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #showcase .frame {
+    height: calc(100vw / 2);
+  }
+  #showcase .frame .overlay {
+    width: calc(100vw / 2);
+  }
+  #stats {
+    background-position: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer div {
+    -ms-flex-preferred-size: 100vw;
+        flex-basis: 100vw;
+    padding-bottom: 30px;
+  }
+  .grid .grid-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  #showcase .frame {
+    height: calc(100vw / 1);
+  }
+  #showcase .frame .overlay {
+    width: calc(100vw / 1);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
