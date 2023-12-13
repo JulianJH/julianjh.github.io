@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* default styles */
+
+
+#BotWrapper {
+    border: 1px solid #CFCFCF;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.25);
+	box-sizing: border-box;
+}
+
+#BotWrapper .BotHeader {
+	border-radius: 16px 16px 0px 0px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #333E48;
+}
+
+#BotWrapper .SubHeader {
+    background: #FFFFFF;
+	border-radius: 16px 16px 0px 0px;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #333E48;
+}
+
+#BotWrapper .SubHeader .TextContent {
+	padding-left: 64px;
+}
+
+#BotWrapper .SubHeader .TextContent #botname {
+    padding-top: 20px;
+}
+
+.BotHeader img{
+    height: 25px;
+}
+
+#BotWrapper .BotBody {
+	box-sizing: border-box;
+    border-top: 1px solid #CFCFCF;
+    border-bottom: 1px solid #CFCFCF;
+}
+
+#BotWrapper .BotContent {
+	padding: 0;
+}
+
+#BotWrapper .BotBody .bot-box:first-child .bot-text {
+	border-radius: 20px 20px 20px 5px;
+}
+
+#BotWrapper .BotBody .bot-box {
+	margin: 10px 16px;
+}
+
+#BotWrapper .BotBody .bot-text {
+	padding: 6px 16px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	color: #333E48;
+	border-radius: 20px 20px 20px 5px;
+	margin: 0;
+}
+
+#BotWrapper .BotBody .bot-box:last-child .bot-text {
+    border-radius: 5px 20px 20px 20px;
+}
+
+#BotWrapper .BotBody .user-box {
+	margin: 16px;
+	margin-top: 0px;
+}
+
+#BotWrapper .BotBody .user-text {
+	padding: 6px 16px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+	border-radius: 20px 20px 5px 20px;
+	margin: 0;
+}
+
+#BotWrapper .BotFooter {
+	box-sizing: border-box;
+    padding: 2px 16px;
+	background: #FFFFFF;
+	border-radius: 0px 0px 16px 16px;
+	/* icon-color: #007298 */
+}
+
+.BotTextInput {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 18px;
+    line-height: 24px;
+    
+}
+
+.BotTextInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #333e48;
+  opacity: 1; /* Firefox */
+}
+
+.BotTextInput:disabled::placeholder {
+    color: #9c9c9c;
+	background-color: white;
+}
+
+.BotTextInput:placeholder-shown + .BotSendMessage .sendBtnMessage .btn-image {
+	/* filter generated for disabled icon color: #9c9c9c;*/
+	filter: brightness(0) saturate(100%) invert(69%) sepia(0%) saturate(573%) hue-rotate(167deg) brightness(92%) contrast(85%);
+}
+
+.BotFooter .sendBtnMessage {
+	padding-top: 16px;
+	height: 32px;
+	float: right;
+}
+
+.BotFooter .sendBtnMessage .btn-image {
+	height: 32px;
+}
+
+.BotBody .bot-button {
+	padding: 2px 16px;
+	background: #FFFFFF;
+	/* color: #007298;  Set with config_var MenuButtonColor*/
+	border: 1px solid #007298;
+	border-radius: 20px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.pill_button {
+    padding: 2px 16px; !important; /*important needed since the aiml category has hardcoded styles for padding*/
+	background: #FFFFFF;
+	color: #007298;
+	border: 1px solid #007298 !important; /*important needed since the aiml category has hardcoded styles for border*/
+	border-radius: 20px !important; /*important needed since the aiml category has hardcoded styles for border*/
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+#BotWrapper .BotBody .bot-text:has(ol),
+#BotWrapper .BotBody .bot-text:has(ul){
+	background: none !important;
+	padding: 0;
+}
+
+.bot-text ol, .bot-text ul {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+.bot-text ul li, .bot-text ol li {
+	padding: 2px 16px;
+	background: #FFFFFF;
+	color: #007298;
+	border: 1px solid #007298;
+	border-radius: 20px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	margin: 16px auto;
+	width: fit-content;
+}
+
+.bot-text ul li .helpme, .bot-text ol li .helpme,
+.bot-text ul li a, .bot-text ol li a,
+.bot-text ul li span, .bot-text ol li span {
+	text-decoration: none;
+}
+
+.textChatIcon {
+    font-size: 16px !important;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    color: #FFF !important;
+    top: 35%;
+    margin-left:10px;
+    position: absolute;
+}
+
+.bg_prompt {
+    right: 76px;
+    bottom: 19px;
+    max-width: 120px;
+    background-color:  rgb(91,160,208);
+    border-radius: 33px;
+    color: white;
+    padding: 4px 14px;
+    font-size: 14px;
+    font-family: roboto;
+    line-height: 17px !important;
+}
+
+
+.BotChatIconMaterial, .facePrompt  {
+    border-radius: 999em;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+	/* background-color: #9E1B32; */
+	/* color: #FFFFFF; */
+    right: 10px;
+    cursor: pointer;
+    z-index: 999998;
+    transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.BotChatIconMaterial .fa{
+    color: #FFF !important;
+}
+.button-depressed{
+    transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#iconChat {
+    position: absolute;
+    top: 22%;
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    right:10px;
+    color: #FFF !important;
+}
+
+.BotMenuButton {
+    /* width: 20px;
+    height: 20px; */
+    float: right;
+    text-align: center;
+    padding: 8px 10px 3px 4px;
+    color: #A31F34;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.BotMenuButton .fa {
+    bottom: unset;
+	color: inherit;
+}
+
+/* end default styles */
+
+/* the scroll styles */
+.BotContent::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.BotContent::-webkit-scrollbar-track {
+
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.BotContent::-webkit-scrollbar-thumb {
+    background: rgb(211,211,211) !important; 
+}
+.BotContent::-webkit-scrollbar-thumb:hover {
+    background: rgb(169,169,169) !important; 
+}
+/* end scroll styles */
+
+#byWho {
+    font-size: 9px !important;
+    /* float:right; */
+    /* padding-right: 5px; */
+    color: rgb(169,169,169)!important;
+}
+
+#copyrigth {
+    /* right: 0px !important; */
+    bottom: 0px !important;
+    /* margin-left: 5px; */
+	width: 100%;
+	text-align: center;
+}
+
+#company, #live{
+    font-size: 9px;
+    font-family: 'Noto Sans', sans-serif;
+    color: rgba(119, 119, 119, 0.76);
+    font-weight:normal;
+}
+
+.BotClose .fa{
+    position:relative;
+    color: #A31F34 !important;
+}
+
+.BotClose .closeLetterX{
+    font-family: 'Roboto', sans-serif;
+}
+
+.div_aux_style {
+    background-color: rgb(240, 239, 237);
+    position:absolute;
+    top: 50px;
+    margin-left: 6.5px;
+    border: 1px solid rgba(64, 128, 255, 1);
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(3,56,0,1);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(3,56,0,1);
+    box-shadow: 0px 0px 2px 0px rgba(3,56,0,1);
+    display:none;
+    z-index: 9999;
+}
+
+#faq-list li {
+    font-size: 12px !important;
+}
+
+.BotLogo img {
+	margin-left: 4px !important;
+	margin-left: 4px !important;
+	height: 52px !important;
+	width: 80px !important;
+}
+
+.BotSubHeaderText{
+	margin-top: 2px;
+	margin-left: 40px;
+}
+
+.BotBody {
+    background-color: #E7E7E7 !important;
+}
+
+@media (max-width: 480px) {
+	.BotContent{
+		max-height: calc(100vh - 140px) !important;
+	}
+	.BotTextInput {
+		width: 78vw !important;
+	}
+	.sendBtnMessage{
+		float:none !important;
+	}
+	
+	#BotWrapper .BotFooter {
+		border-radius: 0px;
+	}
+}

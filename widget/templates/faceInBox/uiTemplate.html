@@ -1,0 +1,50 @@
+
+<div class="BotWrapper" id="BotWrapper">
+	<div class="BotHeader">
+	<!-- NHM: cambiar el src a una referencia relativa al server. Ojo no a la página contenedora -->
+		<div class="BotLogo"></div>
+		<div class="BotClose BotMenuButton primaryButton" onclick="ToggleBot();"><i class="fa fa-times-circle"></i></div>
+		<div class="BotSound BotMenuButton primaryButton" onclick="toogleSpeaker();"></div>
+	</div>
+	<div class="SubHeader"><div id="BotAvatar"></div>
+	<div class="TextContent">
+			<div class="BotSubHeaderText" id='botname'>
+
+			</div>
+		<div class="BotSubHeaderText" id='company'>
+			
+	</div>
+		<div class="BotSubHeaderText" id='live'>
+	
+		</div>
+		</div>
+		</div>
+	<div class="BotBody">
+		<div class="BotContent" id="BotContent"></div>
+	</div>
+	<div class="BotFooter" id="BotFooter">
+		<textarea class='BotTextInput' type='text' id='BotTextInput' maxlength='256' cols='1' rows='1' onkeyup='charactersCount(this.value)' placeholder='Escribe aquí tu mensaje...' onspeechchange='showResponse();' onwebkitspeechchange='showResponse();'/></textarea>
+		<div class="BotSendMessage" id="BotSendMessage" onclick="SendMessage();" > <i class="fa fa-angle-right" aria-hidden="true"></i>
+		</div>
+		<p id="copyrigth" style="font-size: 10px;position: absolute;"><a id="byWho" style="text-decoration: blink;" target="_blank" href="http://snappybots.com">SnappyBots<sup>®</sup></a></p>
+	</div>
+	<!--<div id="countOfwords"><div id="quantity">0</div>/256</div>-->
+</div>
+
+<!--
+<div style="
+    bottom: 80px;
+    right: 10px;
+    position: fixed;
+">
+   <div class="BotChatIconMaterial" onclick="ToggleBot();" style="background-color: rgb(91, 160, 208);"><span><i class="fa fa-comments-o" aria-hidden="true"></i> </span></div>
+  <div class="talk-bubble tri-right btm-right" style="
+    /* position: fixed; */
+">
+  <div class="talktext">
+    <p>Hola Soy Lucia, Estoy aqui para ayudarte</p><input type="text">
+
+  </div>
+</div>
+  </div>
+-->
