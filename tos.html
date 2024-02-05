@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Julian's TOS</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+    <script src="https://kit.fontawesome.com/3fa87815ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#projects">Projects</a></li>
+			<li><button onclick="launchWhatsAppSignup()"
+			  style="background-color: #1877f2; border: 0; border-radius: 4px; color: #fff; cursor: pointer; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; height: 40px; padding: 0 24px;">
+			  Login with Facebook
+			</button></li>
+        </ul>
+    </header>
+
+    <section id="home">
+        <img src="img/avatar.png" alt="">
+        <h1>Julián Jorgensen</h1>
+        FullStack Jr Dev
+    </section>
+
+    <div class="left-twist">
+        <section id="about">
+            <h1>Política de Privacidad</h1>
+            <h4>Última actualización: Enero 2024</h4>
+            <p>Tu privacidad es importante para nosotros y nos esforzamos por proteger la información personal que compartes con nosotros.</p>
+
+			<p>
+			Recopilamos solo información limitada y necesaria para proporcionar nuestros servicios y mejorar la experiencia del usuario.
+			La información que recopilamos puede incluir nombre del usuario y números de teléfonos.
+			Utilizamos esta información para mensajería de atención al cliente a través de WhatsApp.
+			</p>
+			
+			<p>
+			No compartimos información de ningún tipo con terceros y tomamos medidas para proteger tu información personal contra accesos no autorizados, pérdidas y alteraciones. Empleamos protocolos de seguridad estándar de la industria.
+			</p>
+			
+			<p>Tienes el derecho de acceder, corregir o eliminar tu información personal. Puedes ejercer estos derechos contactándonos a través de nuestro sitio web.</p>
+
+			<p>Nos reservamos el derecho de actualizar nuestra política de privacidad. Cualquier cambio significativo se comunicará a través de nuestros canales oficiales.</p>
+			<p>
+			Si tienes preguntas o inquietudes sobre nuestra política de privacidad, no dudes en contactarnos a través de nuestro sitio web.
+			Gracias por confiar en nostros para tus necesidades en WhatsApp. Estamos comprometidos a proteger tu privacidad y brindarte una experiencia segura y positiva.
+			</p>
+
+        </section> 
+    </div>    
+
+    <a href="#header" id="topButton"><i class="fas fa-angle-up fa-xs"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="main.js"></script>
+	<script>
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  appId            : '370588912240387',
+		  autoLogAppEvents : true,
+		  xfbml            : true,
+		  version          : 'v19.0'
+		});
+	  };
+	</script>
+	<script async defer crossorigin="anonymous"
+	  src="https://connect.facebook.net/en_US/sdk.js">
+	</script>
+	<script>
+	  // Facebook Login with JavaScript SDK
+	  function launchWhatsAppSignup() {
+		// Launch Facebook login
+		FB.login(function (response) {
+		  if (response.authResponse) {
+			const accessToken = response.authResponse.accessToken;
+			//Use this token to call the debug_token API and get the shared WABA's ID
+		  } else {
+			console.log('User cancelled login or did not fully authorize.');
+		  }
+		}, {
+		  config_id: '7522659617765794', // configuration ID obtained in the previous step goes here
+		  response_type: 'code',     // must be set to 'code' for System User access token
+		  override_default_response_type: true,
+		  extras: {
+			setup: {
+			  //... Prefilled data can go here
+			}
+		  }
+		});
+	  }
+	</script>
+</body>
+</html>

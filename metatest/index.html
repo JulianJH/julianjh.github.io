@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meta Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+	<button onclick="launchWhatsAppSignup()"
+	  style="background-color: #1877f2; border: 0; border-radius: 4px; color: #fff; cursor: pointer; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; height: 40px; padding: 0 24px;">
+	  Login with Facebook
+	</button>
+
+	<script>
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  appId            : '370588912240387',
+		  autoLogAppEvents : true,
+		  xfbml            : true,
+		  version          : 'v19.0'
+		});
+	  };
+	</script>
+	<script async defer crossorigin="anonymous"
+	  src="https://connect.facebook.net/en_US/sdk.js">
+	</script>
+	<script>
+	  // Facebook Login with JavaScript SDK
+	  function launchWhatsAppSignup() {
+		// Launch Facebook login
+		FB.login(function (response) {
+		  if (response.authResponse) {
+			const accessToken = response.authResponse.accessToken;
+			//Use this token to call the debug_token API and get the shared WABA's ID
+		  } else {
+			console.log('User cancelled login or did not fully authorize.');
+		  }
+		}, {
+		  config_id: '7522659617765794', // configuration ID obtained in the previous step goes here
+		  response_type: 'code',     // must be set to 'code' for System User access token
+		  override_default_response_type: true,
+		  extras: {
+			setup: {
+			  //... Prefilled data can go here
+			}
+		  }
+		});
+	  }
+	</script>
+</body>
+</html>
