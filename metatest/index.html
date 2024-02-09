@@ -16,7 +16,7 @@
 	<script>
 	  window.fbAsyncInit = function() {
 		FB.init({
-		  appId            : '370588912240387',
+		  appId            : '327242233636861',
 		  autoLogAppEvents : true,
 		  xfbml            : true,
 		  version          : 'v19.0'
@@ -32,13 +32,16 @@
 		// Launch Facebook login
 		FB.login(function (response) {
 		  if (response.authResponse) {
-			const accessToken = response.authResponse.accessToken;
+			const authResponse = response.authResponse;
+			const accessToken = response.authResponse.code;
+			console.log('Auth Response', authResponse);
+			console.log('Access token', accessToken);
 			//Use this token to call the debug_token API and get the shared WABA's ID
 		  } else {
 			console.log('User cancelled login or did not fully authorize.');
 		  }
 		}, {
-		  config_id: '7522659617765794', // configuration ID obtained in the previous step goes here
+		  config_id: '363305403256556', // configuration ID obtained in the previous step goes here
 		  response_type: 'code',     // must be set to 'code' for System User access token
 		  override_default_response_type: true,
 		  extras: {
