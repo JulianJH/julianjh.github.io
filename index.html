@@ -1,10 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Julian's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julian Jørgensen — Developer</title>
+  <meta name="description" content="Julian Jørgensen builds web apps and browser tools, including FlickPick and Letterboxd Review Roulette.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e1113;
+      --bg-card: #171c1f;
+      --bg-card-hover: #1d2428;
+      --text: #e8ecee;
+      --text-dim: #9aa6ac;
+      --accent: #40bcf4;
+      --accent-2: #00e054;
+      --accent-3: #ff8000;
+      --border: #262e33;
+      --radius: 14px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 96px 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(ellipse at center, rgba(64, 188, 244, 0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 9vw, 5.5rem);
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+    .hero h1 .dot { color: var(--accent); }
+    .hero .tagline {
+      margin-top: 16px;
+      font-size: 1.15rem;
+      color: var(--text-dim);
+      max-width: 560px;
+    }
+    .hero .links {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+      background: rgba(64, 188, 244, 0.08);
+    }
+    .btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+    /* Projects */
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .projects {
+      padding: 24px 0 48px;
+      display: grid;
+      gap: 20px;
+    }
+    @media (min-width: 720px) {
+      .projects { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .card:hover {
+      background: var(--bg-card-hover);
+      border-color: #344047;
+      transform: translateY(-2px);
+    }
+    .card .kind {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    .card.flickpick .kind { color: var(--accent-2); }
+    .card.roulette .kind { color: var(--accent-3); }
+    .card h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    .card p {
+      margin-top: 10px;
+      color: var(--text-dim);
+      font-size: 0.98rem;
+      flex: 1;
+    }
+    .card .card-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    .dots {
+      display: inline-flex;
+      gap: 5px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    .dots span {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dots .o { background: #ff8000; }
+    .dots .g { background: #00e054; }
+    .dots .b { background: #40bcf4; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0 48px;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="wrap">
+
+    <header class="hero">
+      <h1>Julian Jørgensen<span class="dot">.</span></h1>
+      <p class="tagline">Developer. I build small, focused web apps and browser tools — mostly things that make picking a movie less of a chore.</p>
+      <div class="links">
+        <a class="btn" href="https://github.com/JulianJH" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          github.com/JulianJH
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <p class="section-label">Projects</p>
+      <div class="projects">
+
+        <a class="card flickpick" href="https://flickpick.julianjh.dev" target="_blank" rel="noopener">
+          <span class="kind">Web App · PWA</span>
+          <h2>FlickPick</h2>
+          <p>Can't agree on what to watch? FlickPick turns your Letterboxd watchlist into a head-to-head bracket tournament. Movies face off two at a time until a winner emerges. Installable as an app on your phone.</p>
+          <span class="card-links">
+            <span>flickpick.julianjh.dev →</span>
+          </span>
+        </a>
+
+        <a class="card roulette" href="https://github.com/JulianJH/letterboxd-review-roulette" target="_blank" rel="noopener">
+          <span class="kind">Browser Extension</span>
+          <h2>Letterboxd Review Roulette<span class="dots"><span class="o"></span><span class="g"></span><span class="b"></span></span></h2>
+          <p>Pick a random movie from your Letterboxd watchlist — blind. Instead of the title and poster, you get a review, and you decide from that alone. Works on Chrome and Firefox.</p>
+          <span class="card-links">
+            <span>View on GitHub →</span>
+          </span>
+        </a>
+
+      </div>
+    </main>
+
+    <footer>
+      <span>© 2026 Julian Jørgensen</span>
+      <span><a href="https://github.com/JulianJH" target="_blank" rel="noopener">GitHub</a></span>
+    </footer>
+
+  </div>
 </body>
 </html>
